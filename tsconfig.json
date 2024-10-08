@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"target": "ES6", // Specify ECMAScript target version (ES5, ES6/ES2015, etc.)
+		"module": "commonjs", // Specify module code generation (Node.js uses commonjs)
+		"strict": true, // Enable all strict type checking options
+		"esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules
+		"forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+		"skipLibCheck": true, // Skip type checking of declaration files
+		"outDir": "./dist", // Output directory for compiled files
+		"rootDir": ".", // Root directory of input files
+		"resolveJsonModule": true, // Allows importing of .json files
+		"moduleResolution": "node", // How module resolution is handled
+		"sourceMap": true, // Generate corresponding '.map' files to enable debugging
+		"declaration": true, // Generate .d.ts declaration files for compiled files
+		"noImplicitAny": true, // Raise an error on expressions and declarations with an implied 'any' type
+		"noUnusedLocals": true, // Report errors on unused local variables
+		"noUnusedParameters": true, // Report errors on unused function parameters
+		"noFallthroughCasesInSwitch": true, // Ensure there are no fallthrough cases in switch statements
+		"strictNullChecks": true, // Enable strict null checks
+		"lib": ["ES6", "DOM"], // Include the libraries (e.g., DOM, ES6) for the project
+		"allowJs": true // Allow JavaScript files to be compiled
+	},
+	"include": ["src", "server.js"], // Include the 'src' folder in the compilation
+	"exclude": ["node_modules", "**/*.test.ts"] // Exclude node_modules and test files from compilation
+}
