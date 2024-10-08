@@ -1,10 +1,9 @@
-import { v4 as uuidv4 } from "uuid";
+import express from "express";
 
-// With a libaray
-const randomString = uuidv4();
+const app = express();
 
-const timeStamp = new Date().toISOString();
+const PORT = process.env.PORT || 3000;
 
-setInterval(() => {
-	console.log(timeStamp + ":" + randomString);
-}, 5000);
+app.listen(PORT, () => {
+	console.log("Server started in port", PORT);
+});

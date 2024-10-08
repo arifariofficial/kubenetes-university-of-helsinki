@@ -7,7 +7,7 @@
 		"forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
 		"skipLibCheck": true, // Skip type checking of declaration files
 		"outDir": "./dist", // Output directory for compiled files
-		"rootDir": ".", // Root directory of input files
+		"rootDir": "./src", // Root directory of input files
 		"resolveJsonModule": true, // Allows importing of .json files
 		"moduleResolution": "node", // How module resolution is handled
 		"sourceMap": true, // Generate corresponding '.map' files to enable debugging
@@ -20,6 +20,6 @@
 		"lib": ["ES6", "DOM"], // Include the libraries (e.g., DOM, ES6) for the project
 		"allowJs": true // Allow JavaScript files to be compiled
 	},
-	"include": ["src", "server.js"], // Include the 'src' folder in the compilation
+	"include": ["src"], // Include the 'src' folder in the compilation
 	"exclude": ["node_modules", "**/*.test.ts"] // Exclude node_modules and test files from compilation
 }
