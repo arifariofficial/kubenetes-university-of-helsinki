@@ -1,18 +1,15 @@
-import Koa from "koa";
-const app = new Koa();
-const PORT = process.env.PORT || 3000;
-const createRandomString = () => Math.random().toString(36).substr(2, 6);
+const express = require("express");
+const path = require("path");
 
-const startingString = createRandomString();
+const app = express();
+const port = process.env.PORT || 3000;
 
-app.use(async (ctx) => {
-	if (ctx.path.includes("favicon.ico")) return;
-
-	const stringNow = createRandomString();
-	console.log("--------------------");
-	console.log(`Responding with ${stringNow}`);
-	ctx.body = `${startingString}: ${stringNow}`;
+// Serve the HTML file
+app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname, "index.html"));
 });
 
-console.log(`Started with ${startingString}`);
-app.listen(PORT);
+// Start the server
+app.listen(port, () => {
+	console.log(`Server is running on http://localhost:${port}`);
+});

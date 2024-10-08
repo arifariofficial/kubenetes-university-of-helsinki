@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: project
-          image: arifariofficial/project:v.01
+          image: arifariofficial/project:v0.3
           resources:
             limits:
               memory: "128Mi"
