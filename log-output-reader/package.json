@@ -1,9 +1,9 @@
 {
-	"name": "project",
+	"name": "log-output-reader",
 	"version": "1.0.0",
 	"description": "",
 	"main": "server.js",
-	"type": "module",
+	"type": "commonjs",
 	"scripts": {
 		"start": "node server.js"
 	},
@@ -11,7 +11,9 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@types/express": "^5.0.0",
 		"express": "^4.21.1",
+		"fs": "^0.0.1-security",
 		"uuid": "^10.0.0"
 	}
 }
